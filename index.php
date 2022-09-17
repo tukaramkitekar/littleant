@@ -38,7 +38,7 @@
                           </ul>
     </div>
     <div class="navright">
-                         <h2><i class="fa-solid fa-magnifying-glass" style="color:white; margin-top:20px;"></i><a href="user/signin.php"><i class="fa-regular fa-user" style="color:white; margin-inline:30px;"></i></a></h2>
+                         <h2><i class="fa-solid fa-magnifying-glass" style="color:white; margin-top:20px;"></i><a href="signin.php"><i class="fa-regular fa-user" style="color:white; margin-inline:30px;"></i></a></h2>
     </div>
 </nav>  
 </Header>

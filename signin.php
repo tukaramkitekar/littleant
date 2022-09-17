@@ -1,5 +1,5 @@
 <?php
-include '../database/dbconnect.php';
+include 'database/dbconnect.php';
 session_start();
 if(isset($_POST['submit'])){
 $email = mysqli_real_escape_string($conn, $_POST['email']);
