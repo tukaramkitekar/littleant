@@ -4,11 +4,11 @@ session_start();
 if(isset($_POST['submit'])){
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $pass = mysqli_real_escape_string($conn, md5($_POST['password']));
-$select = mysqli_query($conn, "SELECT * FROM `user_form` WHERE email = '$email' AND password = '$pass'") or die('query failed');
+$select = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email' AND password = '$pass'") or die('query failed');
 if(mysqli_num_rows($select) > 0){
    $row = mysqli_fetch_assoc($select);
    $_SESSION['user_id'] = $row['id'];
-   header('location: ../home.php');}
+   header('location: home.php');}
    else{
       $message[] = 'incorrect email or password!';}
 }
@@ -22,9 +22,9 @@ if(mysqli_num_rows($select) > 0){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/fontawesome/css/all.css">
+    <link rel="stylesheet" href="assets/fontawesome/css/all.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-    <title>Newtry</title>
+    <title>littleant | Sigin</title>
     <style>
           *{margin:0; padding:0;}
           nav{background:black; height:65px; width:100%;}
@@ -35,12 +35,14 @@ if(mysqli_num_rows($select) > 0){
 <Body>
 <Header>
 <nav>
-    <center><img src="../assets/logo.png" width="150px" style="margin-top:4px;"></center>
+    <center><img src="assets/logo.png" width="100px" style="margin-top:4px;"></center>
 </nav>
 </Header>
 
 
 <Main>
+<h1 style="margin-inline:10px; margin-top:10px"><i class="fa-solid fa-arrow-left"></i></h1>
+<br><br>
      <form action="" method="post" enctype="multipart/form-data">
      <h3>login now</h3>
      <?php
