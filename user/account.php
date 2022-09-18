@@ -153,5 +153,60 @@ if(isset($_GET['logout'])){
 
 </div>
 
+
+<br>
+
+<div class="personal">
+
+<div class="personal1">
+
+<div class="imagediv">
+    <br><br><br><br>
+<center>
+<?php
+         $select = mysqli_query($conn, "SELECT * FROM `users` WHERE id = '$user_id'") or die('query failed');
+         if(mysqli_num_rows($select) > 0){
+            $fetch = mysqli_fetch_assoc($select);
+         }
+         if($fetch['image'] == ''){
+            echo '<img src="images/default-avatar.png">';
+         }else{
+            echo '<img src="uploaded_img/'.$fetch['image'].'">';
+         }
+      ?>
+         </a>
+        </center>
+                 <br>
+                <center> <h1 style="font-family:Dubai"><?php echo $fetch['name']; ?></h1></center>
+        </div>
+</div>
+
+
+
+<div class="personal2">
+
+
+
+
+
+   <div class="profile">
+ <h1 align="center">Personal Information</h1>
+ <button style="float:right">Update Profile</button>
+        <br><br><br><br>
+
+        <h2 style="font-family:Dubai">Name:<?php echo $fetch['name']; ?></h2>
+        <h2 style="font-family:Dubai">Email:<?php echo $fetch['email']; ?></h2>
+        <h2 style="font-family:Dubai">Mobile:<?php echo $fetch['mob']; ?></h2>
+        <h2 style="font-family:Dubai">DOB:<?php echo $fetch['dob']; ?></h2>
+        <h2 style="font-family:Dubai">Address:<?php echo $fetch['address']; ?></h2>
+        <a href="../index.php">logout</a>
+  
+   </div>
+
+
+</div>
+
+</div>
+
     
 
