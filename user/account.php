@@ -23,6 +23,7 @@ if(isset($_GET['logout'])){
     <title>Newtry | Home</title>
     <style>
           *{margin:0; padding:0;}
+                             /*Naviation Bar*/
           nav{background:black; height:65px; width:100%;}
           .navleft{float:left; width:20%;}
           .navcenter{float:left; width:65%;}
@@ -37,11 +38,6 @@ if(isset($_GET['logout'])){
           .personal1{float:left; width:400px;}
           .personal2{float:right; width:800px;}
           .imagediv img{margin-top:23px; margin-inline:13px; width:180px; height:180px; border-radius:100%; overflow:hidden; background-color:blue; object-fit:cover;}
-
-
-
-
-   
     </style>
 </Head>
 
