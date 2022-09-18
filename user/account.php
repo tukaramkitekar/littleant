@@ -30,37 +30,18 @@ if(isset($_GET['logout'])){
           ul{margin:20px; margin-inline:60px; margin-top:15px;}
           ul li{display:inline-block; margin:0 20px;}
           ul li a{text-decoration:none; list-style:none; color:white; font-size:20px; font-family:Dubai;}
-
           .navright{float:right; width:10%;}
-           .navright img{
-  
-  margin-top: 14px;
-  margin-inline:13px;
-  width: 40px;
-  height: 40px;
-  border-radius: 100%;
-  overflow: hidden;
-  background-color: blue;
-
-   object-fit: cover;}
-
-   .imagediv img{
-    margin-top: 23px;
-  margin-inline:13px;
-  width: 180px;
-  height: 180px;
-  border-radius: 100%;
-  overflow: hidden;
-  background-color: blue;
-
-   object-fit: cover;
-   }
+          .navright img{margin-top:14px; margin-inline:13px; width:40px; height:40px; border-radius:100%; overflow:hidden; background-color:blue; object-fit:cover;}
+                                       /*Personal Information*/
+          .personal{width:1200px; height:500px; background:linear-gradient(#43cea2, #185a9d); margin-top:50px; margin-inline:70px; border-radius:10px;}
+          .personal1{float:left; width:400px;}
+          .personal2{float:right; width:800px;}
+          .imagediv img{margin-top:23px; margin-inline:13px; width:180px; height:180px; border-radius:100%; overflow:hidden; background-color:blue; object-fit:cover;}
 
 
 
-   .personal{width:1200px; height:500px; background:linear-gradient(#43cea2, #185a9d); margin-top:50px; margin-inline:70px; border-radius:10px;}
-   .personal1{float:left; width:400px;}
-   .personal2{float:right; width:800px;}
+
+   
     </style>
 </Head>
 
@@ -155,58 +136,4 @@ if(isset($_GET['logout'])){
 
 
 <br>
-
-<div class="personal">
-
-<div class="personal1">
-
-<div class="imagediv">
-    <br><br><br><br>
-<center>
-<?php
-         $select = mysqli_query($conn, "SELECT * FROM `users` WHERE id = '$user_id'") or die('query failed');
-         if(mysqli_num_rows($select) > 0){
-            $fetch = mysqli_fetch_assoc($select);
-         }
-         if($fetch['image'] == ''){
-            echo '<img src="images/default-avatar.png">';
-         }else{
-            echo '<img src="uploaded_img/'.$fetch['image'].'">';
-         }
-      ?>
-         </a>
-        </center>
-                 <br>
-                <center> <h1 style="font-family:Dubai"><?php echo $fetch['name']; ?></h1></center>
-        </div>
-</div>
-
-
-
-<div class="personal2">
-
-
-
-
-
-   <div class="profile">
- <h1 align="center">Personal Information</h1>
- <button style="float:right">Update Profile</button>
-        <br><br><br><br>
-
-        <h2 style="font-family:Dubai">Name:<?php echo $fetch['name']; ?></h2>
-        <h2 style="font-family:Dubai">Email:<?php echo $fetch['email']; ?></h2>
-        <h2 style="font-family:Dubai">Mobile:<?php echo $fetch['mob']; ?></h2>
-        <h2 style="font-family:Dubai">DOB:<?php echo $fetch['dob']; ?></h2>
-        <h2 style="font-family:Dubai">Address:<?php echo $fetch['address']; ?></h2>
-        <a href="../index.php">logout</a>
-  
-   </div>
-
-
-</div>
-
-</div>
-
-    
 
