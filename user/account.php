@@ -108,6 +108,10 @@ if(isset($_GET['logout'])){
                                      </div>
           </div>
      </div>
+
+     <div class="order-info">
+          
+     </div>
 </Main>
 </Body>
 </HTML>
