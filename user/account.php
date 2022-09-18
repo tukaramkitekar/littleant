@@ -42,38 +42,35 @@ if(isset($_GET['logout'])){
 </Head>
 
 
-<body>
-<Header>
-<nav>
-    <div class="navleft">
-                        <img src="../assets/logo.png" width="100px" style="margin-inline:40px; margin-top:4px;">
-    </div>
-    <div class="navcenter">
-                          <ul>
-                             <li><a href="#"><i class="fa-solid fa-mobile" style="color:white"></i> Mobiles</a></li>
-                             <li><a href="#"><i class="fa-solid fa-computer" style="color:white"></i> Computers</a></li>
-                             <li><a href="#"><i class="fa-solid fa-radio" style="color:white"></i> Speakers</a></li>
-                             <li><a href="#"><i class="fa-regular fa-clock" style="color:white"></i> Watch</a></li>
-                             <li><a href="#"><i class="fa-solid fa-book" style="color:white"></i> Books</a></li>
-                          </ul>
-    </div>
-    <div class="navright">
 
-    <?php
-         $select = mysqli_query($conn, "SELECT * FROM `users` WHERE id = '$user_id'") or die('query failed');
-         if(mysqli_num_rows($select) > 0){
-            $fetch = mysqli_fetch_assoc($select);
-         }
-         if($fetch['image'] == ''){
-            echo '<img src="assets/default-avatar.png">';
-         }else{
-            echo '<img src="uploaded_img/'.$fetch['image'].'">' ;
-         }
-         
-      ?>
-                         
-    </div>
-</nav>  
+
+<Body>
+<Header>
+       <nav>
+           <div class="navleft">
+                               <img src="../assets/logo.png" width="100px" style="margin-inline:40px; margin-top:4px;">
+           </div>
+           <div class="navcenter">
+                                 <ul>
+                                    <li><a href="#"><i class="fa-solid fa-mobile" style="color:white"></i> Mobiles</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-computer" style="color:white"></i> Computers</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-radio" style="color:white"></i> Speakers</a></li>
+                                    <li><a href="#"><i class="fa-regular fa-clock" style="color:white"></i> Watch</a></li>
+                                    <li><a href="#"><i class="fa-solid fa-book" style="color:white"></i> Books</a></li>
+                                 </ul>
+           </div>
+           <div class="navright">
+                                <?php
+                                $select = mysqli_query($conn, "SELECT * FROM `users` WHERE id = '$user_id'") or die('query failed');
+                                if(mysqli_num_rows($select) > 0){
+                                $fetch = mysqli_fetch_assoc($select);}
+                                if($fetch['image'] == ''){
+                                echo '<img src="assets/default-avatar.png">';}
+                                else{
+                                echo '<img src="uploaded_img/'.$fetch['image'].'">' ;}
+                                ?>
+           </div>
+       </nav>  
 </Header>
 
 
