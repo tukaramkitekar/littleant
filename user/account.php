@@ -20,7 +20,7 @@ if(isset($_GET['logout'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/fontawesome/css/all.css">
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
-    <title>Newtry | Home</title>
+    <title>Littleant | Account</title>
     <style>
           *{margin:0; padding:0;}
                              /*Naviation Bar*/
@@ -97,7 +97,7 @@ if(isset($_GET['logout'])){
           <div class="personal-info2">
                                      <div class="profile">
                                      <h1 align="center">Personal Information</h1>
-                                     <button style="float:right">Update Profile</button>
+                                     <a href="update_account.php"><button style="float:right">Update Profile</button></a>
                                      <br><br><br><br>
                                      <h2 style="font-family:Dubai">Name:<?php echo $fetch['name']; ?></h2>
                                      <h2 style="font-family:Dubai">Email:<?php echo $fetch['email']; ?></h2>
