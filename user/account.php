@@ -96,15 +96,15 @@ if(isset($_GET['logout'])){
           </div>
           <div class="personal-info2">
                                      <div class="profile">
-                                     <h1 align="center">Personal Information</h1>
-                                     <a href="update_account.php"><button style="float:right">Update Profile</button></a>
-                                     <br><br><br><br>
+                                     <h1  style="font-family:Segoe UI; margin-inline:50px"><u>Personal Information</u></h1>
+                                     <a href="update_account.php"><button style="margin-top:20px; margin-inline:360px; height:30px; width:150px">Update Profile</button></a>
+                                     <br><br>
                                      <h2 style="font-family:Dubai">Name:<?php echo $fetch['name']; ?></h2>
                                      <h2 style="font-family:Dubai">Email:<?php echo $fetch['email']; ?></h2>
                                      <h2 style="font-family:Dubai">Mobile:<?php echo $fetch['mob']; ?></h2>
                                      <h2 style="font-family:Dubai">DOB:<?php echo $fetch['dob']; ?></h2>
-                                     <h2 style="font-family:Dubai">Address:<?php echo $fetch['address']; ?></h2>
-                                     <a href="../index.php">logout</a>
+                                     <h2 style="font-family:Dubai">Address:<?php echo $fetch['address']; ?></h2><br><br>
+                                     <button style="width:130px; height:35px; border-radius:10px"><a href="../index.php" style="text-decoration:none; list-style:none;"><h2>logout</h2></a></button>
                                      </div>
           </div>
      </div>
