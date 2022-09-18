@@ -54,7 +54,7 @@ if(isset($_GET['logout'])){
 <Header>
 <nav>
     <div class="navleft">
-                        <img src="assets/logo.png" width="150px" style="margin-inline:40px; margin-top:4px;">
+                        <img src="assets/logo.png" width="100px" style="margin-inline:40px; margin-top:4px;">
     </div>
     <div class="navcenter">
                           <ul>
@@ -74,7 +74,7 @@ if(isset($_GET['logout'])){
     <div class="navright2">
     <a href="user/account.php">
     <?php
-         $select = mysqli_query($conn, "SELECT * FROM `user_form` WHERE id = '$user_id'") or die('query failed');
+         $select = mysqli_query($conn, "SELECT * FROM `users` WHERE id = '$user_id'") or die('query failed');
          if(mysqli_num_rows($select) > 0){
             $fetch = mysqli_fetch_assoc($select);
          }
