@@ -73,26 +73,21 @@ if(isset($_GET['logout'])){
        </nav>  
 </Header>
 
-
-
-<div class="personal">
-
-<div class="personal1">
-
-<div class="imagediv">
-    <br><br><br><br>
-<center>
-<?php
-         $select = mysqli_query($conn, "SELECT * FROM `users` WHERE id = '$user_id'") or die('query failed');
-         if(mysqli_num_rows($select) > 0){
-            $fetch = mysqli_fetch_assoc($select);
-         }
-         if($fetch['image'] == ''){
-            echo '<img src="images/default-avatar.png">';
-         }else{
-            echo '<img src="uploaded_img/'.$fetch['image'].'">';
-         }
-      ?>
+<Main>
+     <div class="personal-info">
+          <div class="personal-info1">
+                                     <div class="imagediv">
+                                     <br><br><br><br>
+                                     <center>
+                                     <?php
+                                     $select = mysqli_query($conn, "SELECT * FROM `users` WHERE id = '$user_id'") or die('query failed');
+                                     if(mysqli_num_rows($select) > 0){
+                                     $fetch = mysqli_fetch_assoc($select);}
+                                     if($fetch['image'] == ''){
+                                     echo '<img src="images/default-avatar.png">';}
+                                     else{
+                                     echo '<img src="uploaded_img/'.$fetch['image'].'">';}
+                                     ?>
          </a>
         </center>
                  <br>
