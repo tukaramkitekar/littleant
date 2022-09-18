@@ -67,7 +67,7 @@ if(isset($_GET['logout'])){
     </div>
 
     <div class="navright">
-    <h2><i class="fa-solid fa-magnifying-glass" style="color:white; margin-top:20px;"></i> <i class="fa-solid fa-cart-plus" style="color:white; margin-top:20px; margin-inline:35px;"></i></h2>
+    <h2><i class="fa-solid fa-magnifying-glass" style="color:white; margin-top:20px;"></i> <a href="cart.php"><i class="fa-solid fa-cart-plus" style="color:white; margin-top:20px; margin-inline:35px;"></a></i></h2>
            </div>
 
 

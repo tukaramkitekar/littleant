@@ -38,6 +38,8 @@ if(isset($_GET['logout'])){
           .personal-info1{float:left; width:400px;}
           .personal-info2{float:right; width:800px;}
           .imagediv img{margin-top:23px; margin-inline:13px; width:180px; height:180px; border-radius:100%; overflow:hidden; background-color:blue; object-fit:cover;}
+                             /*order and watchlist*/
+         
     </style>
 </Head>
 
