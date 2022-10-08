@@ -49,7 +49,7 @@ if(mysqli_num_rows($select) > 0){
 <div class="form-container">
      <form action="" method="post" enctype="multipart/form-data">
  <div class="formdiv1">
-     <h1 align="center" style="color:white; font-family:cursive">Log In To Account</h1>
+     <h1 align="center" style="color:white; font-family:cursive">Log In To Your Account</h1>
 </div>
      <?php
          if(isset($message)){
